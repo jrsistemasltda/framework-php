@@ -19,6 +19,14 @@ class Engine
             throw new Exception("View {$view} não encontrado");
         }
 
+        ob_start();
+
+        extract($data);
+
+        require $view;
+
+        $content = ob_get_contents();
+
         var_dump($view);
     }
 }
