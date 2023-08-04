@@ -5,6 +5,9 @@ return[
         '/login'=>'LoginController@index',
         '/veiculos'=>'VeiculosController@index'
     ],
-    'post' => []
+    'post' => [
+        '/login'=>'LoginController@store',
+
+    ]
 ];
 ?>
